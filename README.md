@@ -167,6 +167,4 @@ node scripts/preview-pages.mjs
 
 网页里的12组结果是预设规则回归，不能作为独立模型准确率或真实业务增长。面试时应以你实际理解、修改和验证的部分描述个人贡献，参见 [产品设计与面试讲解](docs/产品设计与面试讲解.md)。
 
-## 来源与许可
 
-受用户提供的Adaptive-RAG电商客服项目流程启发，采用新的JavaScript代码、界面与数据实现，重点补足任务续接、确认撤销和可检查结果。保留参考项目许可说明，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本项目代码采用MIT许可证。
