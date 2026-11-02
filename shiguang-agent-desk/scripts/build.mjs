@@ -1,0 +1,13 @@
+import { cpSync, mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve, basename } from 'node:path';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const destination = resolve(root, 'dist');
+if (dirname(destination) !== root || basename(destination) !== 'dist') throw new Error('Unexpected build path');
+rmSync(destination, { recursive: true, force: true });
+mkdirSync(destination, { recursive: true });
+for (const path of ['core', 'web', 'favicon.svg']) cpSync(resolve(root, path), resolve(destination, path), { recursive: true });
+const html = readFileSync(resolve(root, 'index.html'), 'utf8').replace('name="runtime" content="auto"', 'name="runtime" content="browser"');
+writeFileSync(resolve(destination, 'index.html'), html);
+writeFileSync(resolve(destination, '.nojekyll'), '');
+console.log('GitHub Pages artifact ready: dist/ (browser-local demo; no server files or secrets)');

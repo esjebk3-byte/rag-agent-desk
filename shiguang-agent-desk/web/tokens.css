@@ -1,0 +1,11 @@
+:root {
+  --font: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --latin: "Aptos", "Segoe UI", -apple-system, sans-serif;
+  --ink: #334239;
+  --muted: #9aa38f;
+  --forest: #2c4639;
+  --lime: #d2e9a0;
+  --canvas: #f7f9f3;
+  --sidebar: #f0f3ea;
+  --line: #e6ebdf;
+}
